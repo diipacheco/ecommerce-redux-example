@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { handleClick } from '../../store/Ducks/Cart/actions';
 import { ApplicationState } from '../../store';
+import { addToCart } from '../../store/Ducks/Cart/actions';
 import { loadRequest } from '../../store/Ducks/Products/actions';
 import * as S from './styles';
 
@@ -38,7 +38,7 @@ function Products() {
               </div>
             </div>
             <S.AddToCart>
-              <button type="button" onClick={() => dispatch(handleClick(true))}>
+              <button type="button" onClick={() => dispatch(addToCart(product))}>
           Adicionar ao carrinho
               </button>
             </S.AddToCart>
